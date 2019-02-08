@@ -29,10 +29,11 @@
     "game"
   ],
   "author": "Nickolay Labazov",
-  "license": "ISC"
-},
+  "license": "ISC",
+
 "repository": {
   "type": "git",
   "url": "git+https://github.com/NickolayLabazov/hw4-trycatch.git"
+}
 }
 

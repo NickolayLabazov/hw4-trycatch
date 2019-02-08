@@ -1,12 +1,14 @@
-export const isNum = (number) => {
-    try {
-      if (isNaN(number)) {
-        throw ('Ошибка');
-      } else {
-        return Number(number);
+export function isNum(number) {
+  try {
+    if (Number.isInteger(number)) {
+      if (number > 0) {
+        return number;
       }
-    } catch (e) {
-      throw ('Данные не являются числом');
+      throw ('Не положительное число');
+    } else {
+      throw ('Данные не являются целым числом');
     }
-  };
-  
+  } catch (e) {
+    return ('Некорректный ввод');
+  }
+}
