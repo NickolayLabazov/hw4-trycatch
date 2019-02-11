@@ -1,3 +1,7 @@
 {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "rules": {
+        "no-throw-literal": "off",
+        "no-param-reassign": "off"        
+     }
 }

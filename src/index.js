@@ -1,5 +1,5 @@
-import { isNum } from './function';
+import isNum from './function';
 
-const number = 8;
+const number = '10';
 
 console.log(isNum(number));
