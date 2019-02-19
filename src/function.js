@@ -1,35 +1,15 @@
 export default function isNum(number) {
   try {
-    if (number['1'] === 'x') {
-      throw ('Данные не являются десятичным числом');
-    }
-    number = Number(number);
-    if (Number.isInteger(number)) {
-      if (number > 0) {
+    if (number.search(/^[1-9]+[0-9]*$/) !== -1) {
+      number = Number(number);
+      const maxNumber = 2 ** 53;
+      if (number < maxNumber) {
         return number;
       }
-      throw ('Не положительное число');
-    } else {
-      throw ('Данные не являются целым числом');
+      throw ('Слишком большое число');
     }
+    throw ('Данные не являются десятичным положительным целым числом');
   } catch (e) {
     return ('Некорректный ввод');
   }
 }
-
-
-/* function isNum(number) {
-  try {
-    if (Number.isInteger(number)) {
-      if (number > 0) {
-        return number;
-      }
-      throw ('Не положительное число');
-    } else {
-      throw ('Данные не являются целым числом');
-    }
-  } catch (e) {
-    return ('Некорректный ввод');
-  }
-}
- */
